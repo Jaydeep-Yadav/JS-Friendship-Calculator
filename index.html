@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Love Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="shortcut icon" href="favi.png" type="image/x-icon">
+  </head>
+  <body>
+    <div class="main glass" id="main">
+      <form action="" method="get">
+        <input type="text" id="boy" placeholder="Your Name" />
+        <br />
+        <input
+          type="text"
+          id="girl"
+          placeholder="Your Crush's Name"
+        />
+        <br />
+        <input
+          type="button"
+          value="Calculate"
+          id="Calculate"
+          onclick="calculate()"
+        />
+        <p id="result"></p>
+      </form>
+    </div>
+
+    <footer id="footer">
+        <p>
+          <a href="mailto:yadavjay374@gmail.com"
+            ><i class="fab fa-google s-icon"></i
+          ></a>
+          <a href="https://www.fb.com/KillerBoy.JY"
+            ><i class="fab fa-facebook-f s-icon"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/jaydeepyadav"
+            ><i class="fab fa-linkedin s-icon"></i
+          ></a>
+          <a href="https://instagram.com/bad_boy_official2/"
+            ><i class="fab fa-instagram s-icon"></i
+          ></a>
+          <a href="https://github.com/jaydeep-yadav"
+            ><i class="fab fa-github s-icon"></i
+          ></a>
+          
+          <p class="copyright">Made By Jaydeep Yadav</p>
+        </p>
+        </footer>
+
+    <script type="text/javascript">
+      let result = 0;
+      
+      let p = document.getElementById("result");
+
+      function calculate() {
+
+        let answers = ['Enemies 😆','Ex Lovers 💔','Friends 💙','Best Friends 💓','Bff 💞','Lovers 💘','Couples 💝','Made for Each Other 💕','Good Friends 💜'];
+        var boy=document.getElementById("boy").value;
+        var girl = document.getElementById("girl").value;
+        result = Math.floor(Math.random() * 100 + 1);
+        var key =0;
+        if(result<10) key=answers[0];
+        else if(result<20) key=answers[1];
+        else if(result<50) key=answers[2];
+        else if(result<60) key=answers[3];
+        else if(result<70) key=answers[4];
+        else if(result<80) key=answers[5];
+        else if(result<90) key=answers[6];
+        else key=answers[7];
+
+        if (!(boy === "" || girl === "") && boy.length>2 && girl.length>2)
+        p.innerHTML = `Love between ${boy} and ${girl} is ${result}%<br>You could be ${key}`;
+        
+      }
+    </script>
+  </body>
+</html>
