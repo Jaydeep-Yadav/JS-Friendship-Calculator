@@ -17,7 +17,7 @@
         <input
           type="text"
           id="girl"
-          placeholder="Your Crush's Name"
+          placeholder="Your Friend's Name"
         />
         <br />
         <input
@@ -75,6 +75,8 @@
         if (!(boy === "" || girl === "") && boy.length>2 && girl.length>2)
         p.innerHTML = `Love between ${boy} and ${girl} is ${result}%<br>You could be ${key}`;
         
+        document.getElementById("boy").value='';
+        document.getElementById("girl").value='';
       }
     </script>
   </body>
